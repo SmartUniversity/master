@@ -1,0 +1,10 @@
+com\mkyong\common\SimpleJdbcTemplateApp.class
+com\mkyong\customer\dao\impl\JdbcCustomerDAO$1.class
+com\mkyong\customer\model\Customer.class
+com\mkyong\customer\model\CustomerParameterizedRowMapper.class
+com\mkyong\customer\dao\CustomerDAO.class
+com\mkyong\customer\dao\impl\SimpleJdbcCustomerDAO.class
+com\mkyong\customer\model\CustomerRowMapper.class
+com\mkyong\common\App.class
+com\mkyong\common\JdbcTemplateApp.class
+com\mkyong\customer\dao\impl\JdbcCustomerDAO.class
