@@ -7,6 +7,7 @@ package com.mkyong.customer.dao.impl;
 
 import com.mkyong.customer.dao.CityDAO;
 import com.mkyong.customer.model.City;
+import org.springframework.jdbc.core.simple.ParameterizedBeanPropertyRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
@@ -25,7 +26,12 @@ public class CityDAOImpl extends SimpleJdbcDaoSupport implements CityDAO {
     }
 
     public City getCityDAOById(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "SELECT * FROM CITY WHERE ID = ?";
+		 
+	City city = getSimpleJdbcTemplate().queryForObject(
+				sql,ParameterizedBeanPropertyRowMapper.newInstance(City.class), id);
+	
+	return city;
     }
     
 }
