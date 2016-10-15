@@ -40,6 +40,16 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Users.findByPhoto", query = "SELECT u FROM Users u WHERE u.photo = :photo")})
 public class Users implements Serializable {
 
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "card_number")
+    private int cardNumber;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 40)
+    @Column(name = "password")
+    private String password;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -175,6 +185,22 @@ public class Users implements Serializable {
     @Override
     public String toString() {
         return "com.mkyong.customer.model.Users[ id=" + id + " ]";
+    }
+
+    public int getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(int cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
