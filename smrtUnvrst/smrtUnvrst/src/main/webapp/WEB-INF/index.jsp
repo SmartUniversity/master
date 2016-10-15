@@ -17,7 +17,7 @@
 		<div class="top-panel"> 
 		
 				
-                    <a href="s-up"> Клацни меня </a>
+                    <a href="signin"> Клацни меня </a>
 		
 		</div>
 		

@@ -78,25 +78,15 @@ public class ControllerMain {
         
     }
     
-    @RequestMapping(value="/reg", method=RequestMethod.POST)
-    public ModelAndView reg( HttpServletResponse response, @RequestParam("n") Integer card_n, @RequestParam("p") String pass, @RequestParam("f") MultipartFile file){
+    @RequestMapping(value="/reg", method=RequestMethod.GET)
+    public ModelAndView reg( HttpServletResponse response){
         ModelAndView modelAndView = new ModelAndView();
         
         ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
         UserDAO test = (UserDAO) context.getBean("userDAO");
         
-        test.insert("new", "new", 1, "photo", card_n, pass);
-        
-        modelAndView.setViewName("index");
-        return modelAndView;
-        
-    }
-    
-    @RequestMapping(value="/s-up")
-    public ModelAndView s_up( HttpServletResponse response){
-        ModelAndView modelAndView = new ModelAndView();
-     
-        modelAndView.setViewName("sign-up");
+        modelAndView.addObject("myvalue", test.findTotalCustomer());
+        modelAndView.setViewName("sign-in");
         return modelAndView;
         
     }

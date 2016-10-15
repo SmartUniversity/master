@@ -1,0 +1,824 @@
+@font-face {
+    font-family: Sanfrancisco;
+    src: url(../fonts/sanfrancisco.ttf);
+}
+
+@font-face {
+    font-family: Tahoma;
+    src: url(../fonts/tahoma.ttf);
+}
+
+a{
+	text-decoration: none;
+}
+
+.newplace-text{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	padding-left: 10px;
+	padding-top: 10px;
+	width: 390px;
+	height: 80px;
+	font-size: 13px;
+	border: 2px solid #dcdcdc;
+	resize: none;
+}
+
+.filephoto{
+	margin-left: 30px;
+}
+
+select {
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	border-radius: 0;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+input[type="text"]:focus { outline: none; }
+
+html,head,body{
+	padding: 0;
+	margin: 0;
+	font-family: Tahoma;
+	background-color: #f0f0f0;
+}
+
+.station-photo{
+	margin-top: 60px;
+	width: 100%;
+	height: 500px;
+	position: fixed;
+	background-size: 100%;
+	z-index: 0;
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	filter: blur(3px);
+	background-size: 100%;
+	overflow: hidden;
+}
+
+
+.black-layer{
+	margin-top: 60px;
+	width: 100%;
+	height: 500px;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 0;
+}
+
+.top-panel{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	z-index: 2;
+	background-color: #0a5885;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.top-panel-center{
+	margin: 0 auto;
+	height: 100%;
+	width: 900px;
+}
+
+.logo{
+	float: left;
+	width: 140px;
+	height: 100%;
+}
+
+.logo-img{
+	float: left;
+	height: 40px;
+	width: 140px;
+	margin: 10px;
+	margin-left: 0px;
+	background-image: url(../img/logo1.png);
+	background-size: 140px;
+}
+
+.sign-in-top{
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 60px;
+	line-height: 60px;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.log-out{
+	margin-top: 20px;
+	margin-right: 15px;
+	height: 15px;
+	width: 15px;
+	background: url(../img/logout.png);
+	background-size: 15px;
+	float: right;
+	text-align: center;
+}
+
+.settings-icon{
+	margin-top: 20px;
+	margin-right: 15px;
+	height: 15px;
+	width: 15px;
+	background: url(../img/settings.png);
+	background-size: 15px;
+	float: right;
+	text-align: center;
+}
+
+.myplaces-icon{
+	margin-top: 20px;
+	margin-right: 15px;
+	height: 15px;
+	width: 15px;
+	background: url(../img/places.png);
+	background-size: 15px;
+	float: right;
+	text-align: center;
+}
+
+.add-place-icon{
+	margin-top: 20px;
+	margin-right: 15px;
+	height: 15px;
+	width: 15px;
+	background: url(../img/add-place.png);
+	background-size: 15px;
+	float: right;
+	text-align: center;
+}
+
+
+
+.main{
+	clear: both;
+	width: 100%;
+	min-height: 650px;
+	
+}
+
+.maincentral{
+	width: 910px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+}
+
+.topspace{
+	height: 150px;
+	width: 100%;
+	z-index: 1;
+}
+
+.bigstationname{
+	height: 300px;
+	width: 100%;
+	text-align: center;
+	line-height: 210px;
+	font-size: 60px;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+.view {
+	 width: 360px;
+	 padding: 20px;
+	 height: 200px;
+	 float: left;
+	 position: relative;
+	 margin-left: 25px;
+	 margin-right: 25px;
+	 margin-bottom: 100px;
+	 cursor: default;
+	 border: 2px solid #fff;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+
+}
+
+.view .topviewblock{
+	width: 100%;
+	height: 114px;
+}
+
+.view .topviewblock img{
+	margin-top: -70px;
+	height: 180px;
+	width: 180px;
+	float: left;
+	border: 2px solid rgba(0, 0, 0, 0.61);
+}
+
+.view .topviewblock .tittle{
+	float: right;
+	height: 114px;
+	width: 170px;
+	line-height: 104px;
+	font-size: 13px;
+	color: #474747;
+	text-align: center;
+	font-weight: bold;
+}
+
+.view .description{
+	font-size: 12px;
+	color: #848484;
+	line-height: 20px;
+	overflow: hidden;
+	margin-top: 10px;
+	width: 100%;
+	height: 83px;
+}
+
+
+
+.sign-in-window{
+	width: 460px;
+	 padding: 20px;
+	 height: 270px;
+	 float: left;
+	 position: relative;
+	 margin-left: 200px;
+	 margin-bottom: 100px;
+	 cursor: default;
+	 border: 2px solid #fff;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+}
+
+
+.sign-up-window{
+	width: 460px;
+	 padding: 20px;
+	 height: 370px;
+	 float: left;
+	 position: relative;
+	 margin-left: 200px;
+	 margin-bottom: 100px;
+	 cursor: default;
+	 border: 2px solid #fff;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+}
+
+.settings-window{
+	width: 460px;
+	 padding: 20px;
+	 height: 430px;
+	 float: left;
+	 position: relative;
+	 margin-left: 200px;
+	 margin-bottom: 100px;
+	 cursor: default;
+	 border: 2px solid #fff;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+}
+
+.user-photo-settings{
+	margin-top: 10px;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-left: 30px;
+	border: 1px solid #d7d7d7;
+}
+
+.userpicfile{
+	margin-top: 30px;
+	margin-left: 20px;
+	height: 30px;
+}
+
+.addnewplace-window{
+	width: 460px;
+	 padding: 20px;
+	 height: 440px;
+	 float: left;
+	 position: relative;
+	 margin-left: 200px;
+	 margin-bottom: 100px;
+	 cursor: default;
+	 border: 2px solid #fff;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+}
+
+
+.sign-tittle{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+	font-size: 15px;
+	color: #474747;
+}
+
+.sign-in-input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	padding-left: 10px;
+	width: 390px;
+	height: 35px;
+	font-size: 13px;
+	border: 2px solid #dcdcdc;
+}
+
+.sign-up-link{
+	width: 100%;
+	text-align: center;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	color: #666666;
+}
+
+.submit-button{
+	margin-left: 30px;
+	padding-left: 0px;
+	margin-top: 20px;
+	width: 400px;
+	height: 40px;
+	font-size: 13px;
+	color: white;
+	font-weight: bold;
+	background-color: #ea685f; 
+	border: none;
+}
+
+.place-window{
+	width: 820px;
+	 padding: 30px 40px;
+	 margin-bottom: 50px;
+	 float: left;
+	 position: relative;
+	 margin-top: 200px;
+	 cursor: default;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	 background-color: white;
+}
+
+.place-window .placepicture{
+	margin-top: -100px;
+	height: 346px;
+	width: 346px;
+	float: left;
+	border: 2px solid white;
+}
+
+.place-window .main-information{
+	width: 450px;
+	overflow: hidden;
+	float: right;
+}
+
+.main-information .top-info{
+	float: left;
+	height: 80px;
+	width: 250px;
+}
+
+.top-info .place-name{
+	width: 100%;
+	height: 30px;
+	font-size: 19px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: #797979;
+}
+
+.top-info .infoblock{
+	margin-top: 0px;
+	width: 100%;
+	height: 25px;
+	font-size: 12px;
+	font-family: Tahoma;
+	color: #aaaaaa;
+	line-height: 25px;
+        white-space: nowrap;
+}
+
+.infoblock .metroicon{
+	float: left;
+	height: 25px;
+	width: 25px;
+	background: url(../img/metroicon.png);
+	background-size: 25px;
+	margin-right: 8px;
+}
+
+.infoblock .adressicon{
+	float: left;
+	height: 25px;
+	width: 25px;
+	background: url(../img/adressicon.png);
+	background-size: 25px;
+	margin-right: 8px;
+}
+
+.main-information .rating-block{
+	width: 120px;
+	height: 80px;
+	float: right;
+	font-family: Tahoma;
+	
+}
+
+.rating-value{
+	width: 100%;
+	height: 50px;
+	color: #125983;
+	line-height: 40px;
+	text-align: center;
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.rating-existed{
+	width: 100%;
+	height: 30px;
+	color: #b0b0b0;
+	line-height: 10px;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 12px;
+}
+
+.rating-star{
+	margin-top: 5px;
+	margin-left: 3px;
+	margin-right: 3px;
+	float: left;
+	height: 18px;
+	width: 18px;
+	background: url(../img/star.png);
+	background-size: 18px;
+}
+
+.rating-star:hover{
+	background: url(../img/star-yellow.png);
+	background-size: 18px;
+}
+
+.main-information .place-description{
+	width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+	float: left;
+	color: #808080;
+	font-size: 12px;
+	font-family: Tahoma;
+	line-height: 25px;
+}
+
+.place-down-block{
+	margin-top: 20px;
+	width: 350px;
+	float: left;
+}
+
+
+.comments-block{
+	float: left;
+	width: 350px;
+	overflow: hidden;
+}
+
+.comment{
+	float: left;
+	margin-top: 20px;
+	font-family: Tahoma;
+	width: 100%;
+	overflow: hidden;
+}
+
+.comment:hover .comment-delete{
+	display: block;
+}
+
+.comment-img{
+	width: 35px;
+	height: 35px;
+	float: left;
+	border-radius: 20px;
+	border: 1px solid #d5d5d5;
+}
+
+.comment-info{
+	float: right;
+	width: 300px;
+}
+
+.comment-author-name{
+	height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #6d6d6d;
+	float: left;
+}
+
+.comment-date{
+	height: 20px;
+	margin-left: 10px;
+	font-size: 9px;
+	line-height: 18px;
+	color: #6d6d6d;
+	float: left;
+}
+
+.comment-delete{
+	display: none;
+	height: 20px;
+	width: 20px;
+	float: right;
+	background: url(../img/delete.png);
+	background-size: 20px;
+}
+
+.comment-text{
+	font-size: 11px;
+	color: #808080;
+	width: 100%;
+	line-height: 18px;
+	float: left;
+}
+
+
+.place-for-newcomment{
+	float: left;
+	height: 70px;
+	width: 350px;
+	background-color: rgba(128, 64, 162, 0.2);
+}
+
+
+.own-comment{
+	float: left;
+	font-family: Tahoma;
+	width: 350px;
+	height: 37px;
+	font-size: 11px;
+	color: #a1a1a1;
+}
+
+.own-comment-img{
+	width: 35px;
+	height: 35px;
+	float: left;
+	border-radius: 20px;
+	border: 1px solid #d5d5d5;
+}
+
+.own-comment-info{
+	
+}
+
+.own-comment-text{
+	float: left;
+	height: 26px;
+	width: 273px;
+	margin-left: 10px;
+	margin-top: 4px;
+	border: 1px solid #d5d5d5;
+	border-right: none;
+	padding: 0;
+}
+
+.own-comment-submit{
+	float: left;
+	height: 28px;
+	width: 28px;
+	background: url(../img/ok-comment.png);
+	background-size: 25px;
+	border: 1px solid #d5d5d5;
+	margin-top: 4px;
+}
+
+
+.author-block{
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #aaaaaa;
+	height: 30px;
+	width: 100%;
+	float: left;
+	line-height: 30px;
+	margin-top: 4px;
+}
+
+.author-icon{
+	float: left;
+	margin-right: 10px;
+	height: 16px;
+	width: 16px;
+	margin-top: 7px;
+	margin-left: 5px;
+	background: url(../img/edit_user.png);
+	background-size: 16px;
+}
+
+.place-delete-icon{
+	color: #973232;
+	float: right;
+	height: 30px;
+}
+
+
+.another-places-block{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	height: 200px;
+	overflow: hidden;
+}
+
+
+.another-place{
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 50px;
+	font-family: Tahoma;
+}
+
+.another-place-img{
+	float: left;
+	width: 48px;
+	height: 48px;
+	border: 1px solid #dbdbdb;
+}
+
+.another-place-name{
+	float: left;
+	margin-left: 12px;
+	width: 280px;
+	height: 24px;
+	line-height: 28px;
+	font-size: 12px;
+	color: #6d6d6d;
+}
+
+.another-place-adress{
+	float: left;
+	margin-left: 7px;
+	width: 290px;
+	height: 24px;
+	line-height: 20px;
+	font-size: 11px;
+	color: #808080;
+}
+
+.another-adressicon{
+	margin-top: 2px;
+	float: left;
+	height: 18px;
+	width: 18px;
+	background: url(../img/adressicon.png);
+	background-size: 18px;
+	margin-right: 1px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+	float: left;
+	margin-top: 0px;
+	width: 100%;
+	height: 80px;
+	background-color: #fafafa;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 80px;
+	color: #bbbbbb;
+}
+
+.metro-body{
+	background-color: white;
+}
+
+.metro-top-space{
+	height: 60px;
+	width: 100%;
+	z-index: 1;
+}
+
+.metro-scheme{
+	margin: 0 auto;
+	width: 650px; 
+	height: 650px;
+	background-image: url(../img/metro-bg.png);
+	background-size: 650px 650px;
+	background-repeat: no-repeat;
+}
+
+.station{
+	position: absolute;
+	float: left;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #454545;
+	cursor: pointer;
+}
+
+.station:hover{
+	color: #0a5885;
+}
+
+#akademgorodok{margin-left: 50px; margin-top: 78px;}
+#zhitomirska{margin-left: 50px; margin-top: 114px;}
+#svyatoshin{margin-left: 50px; margin-top: 149px;}
+#nivki{margin-left: 63px; margin-top: 189px;}
+#berest{margin-left: 0px; margin-top: 234px;}
+#shulyavska{margin-left: 37px; margin-top: 261px;}
+#kpi{margin-left: -13px; margin-top: 288px;}
+#vokzalna{margin-left: 159px; margin-top: 283px;}
+#univer{margin-left: 200px; margin-top: 313px;}
+#teatr{margin-left: 268px; margin-top: 313px;}
+#kreshyatik{margin-left: 345px; margin-top: 313px;}
+#arsenal{margin-left: 347px; margin-top: 333px;}
+#dnepr{margin-left: 401px; margin-top: 355px;}
+#gidro{margin-left: 451px; margin-top: 379px;}
+#levober{margin-left: 521px; margin-top: 375px;}
+#darni{margin-left: 499px; margin-top: 330px;}
+#chernig{margin-left: 498px; margin-top: 306px;}
+#les{margin-left: 555px; margin-top: 281px;}
+#sirec{margin-left: 200px; margin-top: 180px;}
+#dorogozh{margin-left: 232px; margin-top: 205px;}
+#luk{margin-left: 259px; margin-top: 233px;}
+#zolot{margin-left: 283px; margin-top: 260px;}
+#dvorec{margin-left: 329px; margin-top: 370px;}
+#klovska{margin-left: 352px; margin-top: 408px;}
+#pecher{margin-left: 352px; margin-top: 438px;}
+#druzhbi{margin-left: 352px; margin-top: 471px;}
+#vidub{margin-left: 368px; margin-top: 503px;}
+#slavut{margin-left: 348px; margin-top: 561px;}
+#osokorki{margin-left: 368px; margin-top: 585px;}
+#poznyaki{margin-left: 435px; margin-top: 615px;}
+#kharkiv{margin-left: 489px; margin-top: 615px;}
+#virlica{margin-left: 499px; margin-top: 568px;}
+#boris{margin-left: 490px; margin-top: 543px;}
+#khutor{margin-left: 516px; margin-top: 519px;}
+#geroiv{margin-left: 353px; margin-top: 52px;}
+#minska{margin-left: 353px; margin-top: 84px;}
+#obolon{margin-left: 353px; margin-top: 118px;}
+#petrivka{margin-left: 353px; margin-top: 157px;}
+#taras{margin-left: 353px; margin-top: 187px;}
+#kontrakt{margin-left: 353px; margin-top: 217px;}
+#poshtova{margin-left: 353px; margin-top: 247px;}
+#maidan{margin-left: 353px; margin-top: 277px;}
+#lvatolstogo{margin-left: 213px; margin-top: 357px; text-align: right;}
+#olimpiyska{margin-left: 193px; margin-top: 407px;}
+#palac{margin-left: 171px; margin-top: 437px;}
+#libidska{margin-left: 205px; margin-top: 471px;}
+#demiivska{margin-left: 180px; margin-top: 505px;}
+#golos{margin-left: 147px; margin-top: 532px;}
+#vasilkovska{margin-left: 117px; margin-top: 555px;}
+#vistavka{margin-left: 70px; margin-top: 577px;}
+#ipodrom{margin-left: 130px; margin-top: 615px;}
+#teremki{margin-left: 80px; margin-top: 615px;}

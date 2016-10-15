@@ -1,50 +1,50 @@
-<%-- 
-    Document   : sign-up
-    Created on : 25.02.2016, 0:07:07
-    Author     : denis
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Metro Guide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>Smart University | Sign-up</title>
+			
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	
 	<body>
-		<img src="img/First_building.jpg" class="station-photo"/>
-		<div class="black-layer"></div>
-		<div class="top-panel"> 
-			<div class="top-panel-center">
-                            <div class="logo"> <a href="firstrequest"> <div class="logo-img"> </div> </a> </div>
+		
+		<div class="toppanel">
+			<div class="toppanel-center"> 
+				<a href="index.html"> <div class="logo"> </div> </a>
+				
+				<div class="userpanel"> <a href="sign-in.html"> ÐÑÐ¾Ð´ </a>  </div>
+				
 			</div>
 		</div>
 		
-		<div class="main">
-			<div class="maincentral">
-				<div class="topspace"></div>
-				<div class="bigstationname">
-					Some information
-				</div>
+		<div class="maincontent">
+			
+			<form class="signupform" action="reg" enctype="multipart/form-data" method="post">
+				<div class="signintextlabel"> SIGN-UP </div>
+				<input type="text" name="n" placeholder="Номер карты">
+				<input type="password" name="p" placeholder="Пароль">
+				<input type="password" name="pp" placeholder="Повторите пароль">
+				<input type="file" name="f" value="">
+				<input type="submit" value="Отправить">
 				
-				<form class="sign-up-window" action="signupaction" method="post">
-					<div class="sign-tittle"> Регистрация </div>
-					<input type="text" class="sign-in-input" placeholder="Имя" name="firstname">
-					<input type="text" class="sign-in-input" placeholder="Фамилия" name="lastname">
-					<input type="text" class="sign-in-input" placeholder="E-mail" name="email">
-					<input type="password" class="sign-in-input" placeholder="Пароль" name="password">
-					<input type="submit" value="Зарегистрироваться" class="submit-button">
-				</form>
-				
-				
-							
-				
-			</div>
-			<div class="footer">
-					KievGuide 2016	
-			</div>	
+			</form>			
+			
+			
+			
 		</div>
+		
+		
+		<div class="footer"> Smart University Inc. 2016</div>
+		
+		
+		
+		
 	</body>
+	
+	
+	
 </html>
