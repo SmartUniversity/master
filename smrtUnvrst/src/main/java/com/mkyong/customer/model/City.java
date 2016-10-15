@@ -57,7 +57,8 @@ public class City implements Serializable {
         this.id = id;
     }
 
-    public City(String name) {
+    public City(Integer id, String name) {
+        this.id = id;
         this.name = name;
     }
 

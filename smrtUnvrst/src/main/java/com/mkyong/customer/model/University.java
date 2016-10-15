@@ -58,10 +58,13 @@ public class University implements Serializable {
     public University() {
     }
 
+    public University(Integer id) {
+        this.id = id;
+    }
 
-    public University(String name, City idCity) {
+    public University(Integer id, String name) {
+        this.id = id;
         this.name = name;
-        this.idCity = idCity;
     }
 
     public Integer getId() {
