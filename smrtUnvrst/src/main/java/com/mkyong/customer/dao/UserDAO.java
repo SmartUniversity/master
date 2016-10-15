@@ -7,6 +7,8 @@ public interface UserDAO
 {
 
 	public int findTotalCustomer();
+        
+        public void insert(String name, String sname, int univ, String photo, int cardNum, String pass);
 	
 }
 

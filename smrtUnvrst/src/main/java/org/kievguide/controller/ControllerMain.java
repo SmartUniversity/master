@@ -77,6 +77,19 @@ public class ControllerMain {
         return modelAndView;
         
     }
+    
+    @RequestMapping(value="/reg", method=RequestMethod.GET)
+    public ModelAndView reg( HttpServletResponse response){
+        ModelAndView modelAndView = new ModelAndView();
+        
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+        UserDAO test = (UserDAO) context.getBean("userDAO");
+        
+        modelAndView.addObject("myvalue", test.findTotalCustomer());
+        modelAndView.setViewName("sign-in");
+        return modelAndView;
+        
+    }
 
 
 

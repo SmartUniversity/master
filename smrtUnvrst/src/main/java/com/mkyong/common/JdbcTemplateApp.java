@@ -20,6 +20,7 @@ public class JdbcTemplateApp
     		new ClassPathXmlApplicationContext("Spring-Module.xml");
          
          UserDAO test = (UserDAO) context.getBean("userDAO");
+         test.insert("1", "1", 1, "1", 1, "1");
          System.out.println(test.findTotalCustomer());
     	 
          

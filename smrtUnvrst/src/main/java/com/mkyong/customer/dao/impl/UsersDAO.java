@@ -23,4 +23,18 @@ public class UsersDAO extends JdbcDaoSupport implements UserDAO {
 		return total;
 	}
     
+    public void insert(String name, String sname, int univ, String photo, int cardNum, String pass){
+        String sql = "INSERT INTO USERS " +
+                     "(user_name, user_surname, id_univ, photo, card_number, password) VALUES (?, ?, ?, ?, ?, ?)";
+			 
+	getJdbcTemplate().update(sql, new Object[] { 
+            name,
+            sname,
+            univ,
+            photo,
+            cardNum,
+            pass
+        });
+    }
+    
 }
