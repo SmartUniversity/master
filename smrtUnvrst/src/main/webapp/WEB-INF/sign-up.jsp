@@ -16,7 +16,7 @@
 			<div class="toppanel-center"> 
 				<a href="index.html"> <div class="logo"> </div> </a>
 				
-				<div class="userpanel"> <a href="sign-in.html"> ÐÑÐ¾Ð´ </a>  </div>
+				<div class="userpanel"> <a href="sign-in.html"> Вход </a>  </div>
 				
 			</div>
 		</div>
@@ -25,11 +25,11 @@
 			
 			<form class="signupform" action="reg" enctype="multipart/form-data" method="post">
 				<div class="signintextlabel"> SIGN-UP </div>
-				<input type="text" name="n" placeholder="Номер карты">
-				<input type="password" name="p" placeholder="Пароль">
-				<input type="password" name="pp" placeholder="Повторите пароль">
-				<input type="file" name="f" value="">
-				<input type="submit" value="Отправить">
+				<input type="text" name="n" placeholder="Введите номер карты...">
+				<input type="password" name="p" placeholder="Введите пароль...">
+				<input type="password" placeholder="Повторите пароль...">
+				<input type="file" name="f" value="Загрузите фото">
+				<input type="submit" value="Войти">
 				
 			</form>			
 			
