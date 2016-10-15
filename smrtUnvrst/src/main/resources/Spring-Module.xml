@@ -6,5 +6,8 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<import resource="database/Spring-Datasource.xml"/>
 	<import resource="customer/Spring-Customer.xml"/>
 	<import resource="helpfiles/Spring-User.xml"/>
+        <import resource="helpfiles/Spring-City.xml"/>
+        <import resource="helpfiles/Spring-University.xml"/>
+
         
 </beans>
